@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Dict-Main.t
+lib/Dict/Main.pm
+lib/Dict/Main/Radix.pm
+lib/Dict/Main/Encode.pm
+lib/Dict/Main/Display.pm
+lib/Dict/Main/Import.pm

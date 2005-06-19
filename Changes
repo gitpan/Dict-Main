@@ -1,0 +1,6 @@
+Revision history for Perl extension Dict::Main.
+
+0.01  Sun Jun 19 15:22:10 2005
+	- original version; created by h2xs 1.23 with options
+		-AX --skip-exporter --use-new-tests -n Dict::Main
+
