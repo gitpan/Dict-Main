@@ -1,16 +1,14 @@
-Dict-Main version 0.01
+Dict-Main version 1.2
 ======================
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+This is a dictionary from Arabic to Italian:
+for every word coming from the input file, these modules are able to take out the radix, look for the translation according to the radix and exporting the whole dictionary DB in HTML or LaTeX.
+Main features are:
+->finding the radix, which is accomplished by chopping away all the prefixes and suffixes, and by some characters removal at the end.
+->exportation. This is a real good thing for Arabic students like me, so that I may easily memorize the meaning of a radix. This way, the finding the translation of a word while translating "on-the-fly" will be easier and faster.
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+All the vocabulary databases are located in ./dicts/, these files may be directly modified without any harm to the script execution.
+Moreover I'm working on an importation module, so that new radixes/terms may be added easily and quickly to the local database.
 
 INSTALLATION
 
@@ -21,15 +19,50 @@ To install this module type the following:
    make test
    make install
 
+
 DEPENDENCIES
 
-This module requires these other modules and libraries:
+This module requires no other modules, just Perl >=5.8.1
 
-  blah blah blah
+
+MODULES
+
+Dict::Main::Radix
+	this will return the radix of a word
+
+Dict::Main::
+	
+
+Dict::Main::Display_html
+	this will export all the dictionary in a HTML form, placed in the ./html/ directory.
+
+Dict::Main::Display_latex
+	this will export all the dictionary in a LaTeX form, placed in the ./latex/ directory. Note that you'd need the ArabTeX package installed if you are going to create a DVI or PDF from that source file.
+
+Dict::Main::Import
+	this will import the content of every specified file, if the lines are correctly formatted (ignored otherwise)
+
+
+NOTES
+
+->Everything (script code and data) works ONLY if raw data is encoded in Unicode (utf8 or UTF-8). Other representations will lead to errors or wrong results.
+->Please use non-formatted text as input data.
+Using Microsoft Word .doc files, Adobe .pdf or HTML pages WILL cause problems.
+->Every database name begins with a '%' so that it isn't hidden by the shell in case it begins with a period.
+->The syntax for vocabulary database is the following:
+
+"\t arabic-radix
+
+arabic name\t italian translation"
+
+where '\t' means TAB (tabulation, NOT sum of whitespaces)
+->The syntax for files to be imported is the following:
+
+"Italian_name = Arabic_name"
+
+
 
 COPYRIGHT AND LICENCE
-
-Put the correct copyright and licence information here.
 
 Copyright (C) 2005 by Andrea Benazzo
 

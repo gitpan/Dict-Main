@@ -1,24 +1,4 @@
-# 
-#     This file is part of dict.
-#     Copyright (c) 2005 Andrea Benazzo <andy@slacky.it>
-# 
-#     This library is free software; you can redistribute it and/or
-#     modify it under the terms of the GNU Library General Public
-#     License as published by the Free Software Foundation; either
-#     version 2 of the License, or (at your option) any later version.
-# 
-#     This library is distributed in the hope that it will be useful,
-#     but WITHOUT ANY WARRANTY; without even the implied warranty of
-#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#     Library General Public License for more details.
-# 
-#     You should have received a copy of the GNU Library General Public License
-#     along with this library; see the file COPYING.LIB.  If not, write to
-#     the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#     Boston, MA 02111-1307, USA.
-
-
-package Dict::Main::Display; #displays various info
+package Dict::Main::Display;
 
 use strict;
 use Dict::Main::Radix;
@@ -198,4 +178,36 @@ sub display_latex{ # creates the LaTeX source file for the whole dictionary
 
 
 
-return 1; #needed by "use.."
+1;
+__END__
+
+=head1 NAME
+
+Dict::Main::Display - Perl extension for translating Arabic words into Italian
+
+=head1 SYNOPSIS
+
+  use Dict::Main::Display;
+
+
+=head1 DESCRIPTION
+
+This module will take care of various duties:
+->display the translation of the given word (according to the local DB)
+->export the local DB in HTML/LaTeX form
+
+
+=head1 AUTHOR
+
+Andrea Benazzo, E<lt>andy@slacky.itE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2005 by Andrea Benazzo
+
+This library is covered by the GPL License; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.6 or,
+at your option, any later version of Perl 5 you may have available.
+
+
+=cut

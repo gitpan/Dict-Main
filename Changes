@@ -1,6 +1,17 @@
-Revision history for Perl extension Dict::Main.
+			<< Arabic->English Dictionary - Andrea Benazzo >>
 
-0.01  Sun Jun 19 15:22:10 2005
-	- original version; created by h2xs 1.23 with options
-		-AX --skip-exporter --use-new-tests -n Dict::Main
+25/04/05	1.2
+->corrected some errors in encoding
 
+23/04/05	1.1
+
+->added support for multiple files importation;
+->fatal end if the necessary argument passed to the import function is missing;
+->added counter for number of imported files;
+->display "Imported file: FILENAME" after every importation;
+->added counter for total number of dictionaries after importation;
+->now there's no loop for user choice;
+->creates directory "./dicts/" if missing;
+->added check on the minimum number of arguments;
+->added warning if "./dicts/" is empty;
+->dictionaries will be named "%..." so that shell won't hide the ones beginning with a period;

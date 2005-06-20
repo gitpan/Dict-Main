@@ -8,3 +8,4 @@ lib/Dict/Main/Radix.pm
 lib/Dict/Main/Encode.pm
 lib/Dict/Main/Display.pm
 lib/Dict/Main/Import.pm
+META.yml                                 Module meta-data (added by MakeMaker)
